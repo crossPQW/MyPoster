@@ -64,15 +64,34 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PreviewCell" id="me8-6u-PlI">
-                                        <rect key="frame" x="0.0" y="5" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PreviewCell" id="me8-6u-PlI" customClass="PreviewCell" customModule="MyPoster" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-MX-YHH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="GFk-MX-YHH" firstAttribute="top" secondItem="me8-6u-PlI" secondAttribute="top" id="UAM-rz-6Sc"/>
+                                            <constraint firstItem="GFk-MX-YHH" firstAttribute="leading" secondItem="me8-6u-PlI" secondAttribute="leading" id="jNG-h2-BRW"/>
+                                            <constraint firstAttribute="trailing" secondItem="GFk-MX-YHH" secondAttribute="trailing" id="qjr-b9-tL1"/>
+                                            <constraint firstAttribute="bottom" secondItem="GFk-MX-YHH" secondAttribute="bottom" id="zeA-s0-W0e"/>
+                                        </constraints>
+                                        <size key="customSize" width="80" height="60"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="GFk-MX-YHH" id="2SU-Lw-7no"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Osx-rT-VfW" id="Y7V-Uk-AUP"/>
+                                    <outlet property="delegate" destination="Osx-rT-VfW" id="y58-8D-9jb"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,6 +108,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lm9-aK-GJ9"/>
+                    <connections>
+                        <outlet property="colorSelector" destination="P8D-Mw-Phc" id="SHw-hI-XjI"/>
+                        <outlet property="poster" destination="cmH-zX-6Tv" id="9B6-zD-FbQ"/>
+                        <outlet property="previewCollection" destination="b7M-ac-jhU" id="05L-4L-h0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9F-a8-5ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

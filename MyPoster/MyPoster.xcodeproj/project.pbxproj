@@ -15,6 +15,7 @@
 		3862ACAA1F5008460039B058 /* MyPosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACA91F5008460039B058 /* MyPosterTests.swift */; };
 		3862ACB51F5008460039B058 /* MyPosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACB41F5008460039B058 /* MyPosterUITests.swift */; };
 		3862ACC31F5008AE0039B058 /* FontStylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACC21F5008AE0039B058 /* FontStylesViewController.swift */; };
+		3862ACC51F501CDD0039B058 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACC41F501CDD0039B058 /* PreviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3862ACB41F5008460039B058 /* MyPosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPosterUITests.swift; sourceTree = "<group>"; };
 		3862ACB61F5008460039B058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3862ACC21F5008AE0039B058 /* FontStylesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStylesViewController.swift; sourceTree = "<group>"; };
+		3862ACC41F501CDD0039B058 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				3862AC941F5008460039B058 /* AppDelegate.swift */,
 				3862AC961F5008460039B058 /* ViewController.swift */,
+				3862ACC41F501CDD0039B058 /* PreviewCell.swift */,
 				3862ACC21F5008AE0039B058 /* FontStylesViewController.swift */,
 				3862AC981F5008460039B058 /* Main.storyboard */,
 				3862AC9B1F5008460039B058 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3862ACC51F501CDD0039B058 /* PreviewCell.swift in Sources */,
 				3862AC971F5008460039B058 /* ViewController.swift in Sources */,
 				3862ACC31F5008AE0039B058 /* FontStylesViewController.swift in Sources */,
 				3862AC951F5008460039B058 /* AppDelegate.swift in Sources */,
@@ -528,6 +532,7 @@
 				3862ACBB1F5008460039B058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3862ACBC1F5008460039B058 /* Build configuration list for PBXNativeTarget "MyPosterTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +541,7 @@
 				3862ACBE1F5008460039B058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3862ACBF1F5008460039B058 /* Build configuration list for PBXNativeTarget "MyPosterUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +550,7 @@
 				3862ACC11F5008460039B058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

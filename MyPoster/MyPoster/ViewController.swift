@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     func drawPoster() {
         let drawRect = CGRect(x: 0, y: 0, width: 1600, height: 1400)
         let titleRect = CGRect(x: 200, y: 200, width: 1200, height: 200)
-        let titleFont = UIFont(name: titleFontName, size: 90)
+        let titleFont = UIFont(name: titleFontName, size: 90) ?? UIFont.systemFont(ofSize: 90)
         
         let centered = NSMutableParagraphStyle()
         centered.alignment = .center

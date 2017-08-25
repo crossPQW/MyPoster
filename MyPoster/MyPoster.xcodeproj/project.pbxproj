@@ -16,6 +16,7 @@
 		3862ACB51F5008460039B058 /* MyPosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACB41F5008460039B058 /* MyPosterUITests.swift */; };
 		3862ACC31F5008AE0039B058 /* FontStylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACC21F5008AE0039B058 /* FontStylesViewController.swift */; };
 		3862ACC51F501CDD0039B058 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACC41F501CDD0039B058 /* PreviewCell.swift */; };
+		3862ACC71F5031760039B058 /* ColorSelector+Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862ACC61F5031760039B058 /* ColorSelector+Drag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3862ACB61F5008460039B058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3862ACC21F5008AE0039B058 /* FontStylesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStylesViewController.swift; sourceTree = "<group>"; };
 		3862ACC41F501CDD0039B058 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
+		3862ACC61F5031760039B058 /* ColorSelector+Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorSelector+Drag.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				3862AC961F5008460039B058 /* ViewController.swift */,
 				3862ACC41F501CDD0039B058 /* PreviewCell.swift */,
 				3862ACC21F5008AE0039B058 /* FontStylesViewController.swift */,
+				3862ACC61F5031760039B058 /* ColorSelector+Drag.swift */,
 				3862AC981F5008460039B058 /* Main.storyboard */,
 				3862AC9B1F5008460039B058 /* Assets.xcassets */,
 				3862AC9D1F5008460039B058 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3862ACC71F5031760039B058 /* ColorSelector+Drag.swift in Sources */,
 				3862ACC51F501CDD0039B058 /* PreviewCell.swift in Sources */,
 				3862AC971F5008460039B058 /* ViewController.swift in Sources */,
 				3862ACC31F5008AE0039B058 /* FontStylesViewController.swift in Sources */,

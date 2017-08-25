@@ -63,6 +63,11 @@ class ViewController: UIViewController {
         colorSelector.dataSource = self
         
         drawPoster()
+        
+        colorSelector.dragDelegate = self
+        
+        poster.isUserInteractionEnabled = true
+        poster.addInteraction(UIDropInteraction(delegate: self))
     }
 }
 

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MobileCoreServices
 
 extension ViewController: UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
@@ -19,12 +20,22 @@ extension ViewController: UIDropInteractionDelegate {
         let location = session.location(in: poster)
         
         //响应事件
-        session.loadObjects(ofClass: UIColor.self) {
-            guard let color = $0.first as? UIColor else { return }
-            
-            if location.y < self.poster.bounds.midY {
-                self.titleColor = color
-                self.drawPoster()
+        if session.hasItemsConforming(toTypeIdentifiers: [kUTTypePlainText as String]) {
+            session.loadObjects(ofClass: NSString.self, completion: {
+                guard let string = $0.first as? NSString else { return }
+                if location.y < self.poster.bounds.midY {
+                    self.titleFontName = string as String
+                    self.drawPoster()
+                }
+            })
+        }else {
+            session.loadObjects(ofClass: UIColor.self) {
+                guard let color = $0.first as? UIColor else { return }
+                
+                if location.y < self.poster.bounds.midY {
+                    self.titleColor = color
+                    self.drawPoster()
+                }
             }
         }
     }

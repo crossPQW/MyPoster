@@ -45,7 +45,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-zX-6Tv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-zX-6Tv">
                                 <rect key="frame" x="16" y="194" width="343" height="257.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cmH-zX-6Tv" secondAttribute="height" multiplier="4:3" id="705-B3-vo7"/>

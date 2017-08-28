@@ -28,7 +28,14 @@ extension ViewController: UIDropInteractionDelegate {
                     self.drawPoster()
                 }
             })
-        }else {
+        } else if session.hasItemsConforming(toTypeIdentifiers: [kUTTypeImage as String]) {
+            session.loadObjects(ofClass: UIImage.self, completion: {
+                guard let draggedImage = $0.first as? UIImage else { return }
+                
+                self.posterBg = draggedImage
+                self.drawPoster()
+            })
+        } else {
             session.loadObjects(ofClass: UIColor.self) {
                 guard let color = $0.first as? UIColor else { return }
                 

@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         ]
         
         let renderer = UIGraphicsImageRenderer(size: drawRect.size)
+        
         poster.image = renderer.image {
             UIColor.gray.set()
             $0.fill(drawRect)

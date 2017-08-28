@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		385B420A1F5414550032F10B /* FontStyles+Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B42091F5414550032F10B /* FontStyles+Drag.swift */; };
+		385B420C1F5425D10032F10B /* PreviewCollection+Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B420B1F5425D10032F10B /* PreviewCollection+Drop.swift */; };
 		3862AC951F5008460039B058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862AC941F5008460039B058 /* AppDelegate.swift */; };
 		3862AC971F5008460039B058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862AC961F5008460039B058 /* ViewController.swift */; };
 		3862AC9A1F5008460039B058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3862AC981F5008460039B058 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		385B42091F5414550032F10B /* FontStyles+Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontStyles+Drag.swift"; sourceTree = "<group>"; };
+		385B420B1F5425D10032F10B /* PreviewCollection+Drop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewCollection+Drop.swift"; sourceTree = "<group>"; };
 		3862AC911F5008460039B058 /* MyPoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3862AC941F5008460039B058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3862AC961F5008460039B058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				3862AC941F5008460039B058 /* AppDelegate.swift */,
 				3862AC961F5008460039B058 /* ViewController.swift */,
+				385B420B1F5425D10032F10B /* PreviewCollection+Drop.swift */,
 				3862ACC41F501CDD0039B058 /* PreviewCell.swift */,
 				3862ACC21F5008AE0039B058 /* FontStylesViewController.swift */,
 				3862ACC61F5031760039B058 /* ColorSelector+Drag.swift */,
@@ -276,6 +279,7 @@
 				3862ACC51F501CDD0039B058 /* PreviewCell.swift in Sources */,
 				385B420A1F5414550032F10B /* FontStyles+Drag.swift in Sources */,
 				3862AC971F5008460039B058 /* ViewController.swift in Sources */,
+				385B420C1F5425D10032F10B /* PreviewCollection+Drop.swift in Sources */,
 				3862ACC31F5008AE0039B058 /* FontStylesViewController.swift in Sources */,
 				3862AC951F5008460039B058 /* AppDelegate.swift in Sources */,
 			);

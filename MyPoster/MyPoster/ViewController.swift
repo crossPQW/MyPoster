@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var previewCollection: UICollectionView!
     
+    var posterPreviews = [UIImage]()
+    
     var titleText = "Click here to set your title"
     var titleFontName = "Helvetica Neue"
     var titleColor = UIColor.white
@@ -69,6 +71,9 @@ class ViewController: UIViewController {
         
         poster.isUserInteractionEnabled = true
         poster.addInteraction(UIDropInteraction(delegate: self))
+        poster.addInteraction(UIDragInteraction(delegate: self))
+        
+        previewCollection.dropDelegate = self
     }
 }
 
@@ -78,15 +83,20 @@ extension ViewController: UICollectionViewDataSource {
         if collectionView == colorSelector {
             return colors.count
         }else{
-            let previewFrame = CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height)
-            let promptLabel = UILabel(frame: previewFrame)
+            if posterPreviews.isEmpty {
+                let previewFrame = CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height)
+                let promptLabel = UILabel(frame: previewFrame)
+                
+                promptLabel.text = "Drag your poster here"
+                promptLabel.textColor = UIColor.gray
+                promptLabel.textAlignment = .center
+                
+                collectionView.backgroundView = promptLabel
+                return 0
+            }else{
+                return posterPreviews.count
+            }
             
-            promptLabel.text = "Drag your poster here"
-            promptLabel.textColor = UIColor.gray
-            promptLabel.textAlignment = .center
-            
-            collectionView.backgroundView = promptLabel
-            return 0
         }
     }
     
@@ -99,7 +109,9 @@ extension ViewController: UICollectionViewDataSource {
             cell.layer.borderColor = UIColor.white.cgColor
             return cell
         }else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PreviewCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PreviewCell", for: indexPath) as! PreviewCell
+            cell.imageView.image = posterPreviews[indexPath.row]
+            
             return cell
         }
     }

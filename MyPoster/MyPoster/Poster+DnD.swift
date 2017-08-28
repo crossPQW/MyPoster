@@ -10,6 +10,15 @@ import Foundation
 import UIKit
 import MobileCoreServices
 
+extension ViewController: UIDragInteractionDelegate {
+    func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
+        guard let image = poster.image else { return [] }
+        
+        let provider = NSItemProvider(object: image)
+        return [UIDragItem(itemProvider: provider)]
+    }
+}
+
 extension ViewController: UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
         return UIDropProposal(operation: .copy)

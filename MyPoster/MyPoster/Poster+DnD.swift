@@ -15,7 +15,7 @@ extension ViewController: UIDropInteractionDelegate {
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        //获取防止的位置
+        //获取放置的位置
         let location = session.location(in: poster)
         
         //响应事件
